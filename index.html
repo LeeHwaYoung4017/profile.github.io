@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet"> <!-- 한글폰트 NotoSans -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript">
+		function move(idx) {
+			var offset = $("#"+idx).offset();
+			$('html, body').animate({scrollTop : offset.top}, 400);
+		}
+	</script>
+
+	<style type="text/css">
+		body {
+			width: 100%;
+			height: auto;
+		}
+		#menu {
+			position: fixed;
+			width: 100%;
+			left: 0;
+			top: 0;
+			height: 4%;
+			z-index: 10;
+		}
+		#menuBar{
+			width: 20em;
+		    height: 2em;
+		    margin: 0;
+		    float: right;
+		    margin-right: 2%;
+		    list-style: none;
+		    z-index: 9999;
+		    color: gray;
+		    background-color: silver;
+		    border-radius: 2px 2px 30px 30px;
+		}
+		#menuBar li {
+			float: left;
+		    padding-top: 0.5%;
+		    padding-right: 7%;
+		    font-family: 'Noto Sans JP', sans-serif;
+		    font-size: 1em;
+		    text-align: center;
+		    left: 0;
+		    top: 0;
+		}
+		#menuBar li:hover {
+			color: black;
+			-ms-transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+            transition: all 0.3s ease-in-out;
+		}
+		
+		#loading {
+			position: absolute;
+		    width: 100%;
+		    height: 8%;
+		    left: 0%;
+		    top: 40%;
+		    text-align: center;
+		    font-family: 'Noto Sans JP', sans-serif;
+		    font-size: 7em;
+		    color: white;
+		    text-align: center;
+		}
+
+		
+		#loading span {
+			padding-right: 0.5%;
+			display: inline-block;
+			margin: 0 -.075em;
+			animation: loading 1.7s infinite alternate;
+		}
+		#loading span:nth-child(2) {
+			animation-delay: .1s;
+		}
+		#loading span:nth-child(3) {
+			animation-delay: .2s;
+		}
+		#loading span:nth-child(4) {
+			animation-delay: .3s;
+		}
+		#loading span:nth-child(5) {
+			animation-delay: .4s;
+		}
+		#loading span:nth-child(6) {
+			animation-delay: .5s;
+		}
+		#loading span:nth-child(7) {
+			animation-delay: .6s;
+		}
+		#loading span:nth-child(8) {
+			animation-delay: .7s;
+		}
+		#loading span:nth-child(9) {
+			animation-delay: .8s;
+		}
+		#loading span:nth-child(10) {
+			animation-delay: .9s;
+		}
+		#loading span:nth-child(11) {
+			animation-delay: 1s;
+		}
+		#loading span:nth-child(12) {
+			animation-delay: 1.1s;
+		}
+		#loading span:nth-child(13) {
+			animation-delay: 1.2s;
+		}
+		#loading span:nth-child(14) {
+			animation-delay: 1.3s;
+		}
+		#loading span:nth-child(15) {
+			animation-delay: 1.4s;
+		}
+		#loading span:nth-child(16) {
+			animation-delay: 1.5s;
+		}
+		#loading span:nth-child(17) {
+			animation-delay: 1.6s;
+		}
+		#loading span:nth-child(18) {
+			animation-delay: 1.7s;
+		}
+		#loading span:nth-child(19) {
+			animation-delay: 1.8s;
+		}
+		@keyframes loading {
+			0% {
+				transform: scale(1);
+			}
+			100% {
+				transform: scale(0.8);
+			}
+		}
+		#Name{
+			position: relative;
+			background-image: url(https://i.ibb.co/tP1mdSV/01.jpg);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			width: 100%;
+			height: 1200px;
+			left: 0;
+			top: 0;
+		}
+		
+
+		#Skill{
+			position: relative;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			margin-top: 0px;
+    		padding-top: 30px;
+    		padding-bottom: 2%;
+			background-color: #d4d4d4;
+		}
+		#Skill h1{
+			text-align: center;
+			font-family: 'Noto Sans JP', sans-serif;
+		    font-size: 4em;
+		}
+		.SkillImg{
+			position: relative;
+			text-align: center;
+			margin-bottom: 3em;
+		}
+		.SkillImg img {
+		    width: 160px;
+   			height: 166px;
+			position: relative;
+			border-radius: 30px 30px;
+			border: 1px solid #d4d4d4;
+		    text-align: center;
+		    margin-right: 2rem;
+		    box-shadow: 6px 3px 3px black;
+		}
+
+		
+		#Project{
+			position: relative;
+			width: 100%;
+			min-height: 100%;
+			left: 0;
+			top: 0;
+		}
+		#Project h1{
+			position: relative;
+			text-align: center;
+			font-family: 'Noto Sans JP', sans-serif;
+		    font-size: 4em;
+		}
+		.ProjectBox{
+			position: relative;
+			width: 100%;
+			height: 350px;
+			max-width: 60vw;
+			border: 1px solid #d4d4d4;
+			box-shadow: 9px 4px 4px #d4d4d4;	    
+		    margin: 0 auto 30px;
+		}
+		.ProjectImg{
+			float: left;
+			height: 100%;
+			width: 30%;
+			border: 1px solid #d4d4d4;
+			background-color: black;
+		}
+		.ProjectImg a img{
+			width: 100%;
+			height: 100%;
+		}
+		.ProjectTitle{
+			float: right;
+			height: 100%;
+			width: 69%;
+		}
+		.ProjectTitle h2{
+			text-align: center;
+		}
+		.ProjectTitle h3{
+			margin: 0% 3% 3%;
+		}
+
+		
+		#Contact{
+			position: relative;
+			width: 100%;
+			min-height: 30%;
+			left: 0;
+			top: 0;
+			padding-top: 30px;
+			font-family: 'Noto Sans JP', sans-serif;
+		    font-size: 2em;
+			text-align: center;
+			background-color: #d4d4d4;
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="menu">
+		<ul id="menuBar">
+			<li onclick="move('Name')">Name</li>
+			<li onclick="move('Skill')">Skill</li>
+			<li onclick="move('Project')">Project</li>
+			<li onclick="move('Contact')">Contact</li>
+		</ul>
+	</div>
+	<div id="Name">
+		<div id="loading">
+			<span>D</span><span>e</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>e</span><span>r</span>
+			<span> </span>
+			<span>이</span><span>화</span><span>영</span>
+			<span> </span>
+			<span>포</span><span>트</span><span>폴</span><span>리</span><span>오</span>
+		</div>
+	</div>
+	<div id="Skill">
+		<h1>Skill</h1>
+		<div class="SkillImg">
+			<img src="https://i.ibb.co/TrVRNP9/java.jpg" alt="java" border="0">
+		</div>
+		<div class="SkillImg">
+			<img src="https://i.ibb.co/yV0PsND/html.jpg" alt="html" border="0">
+			<img src="https://i.ibb.co/QCCsFLg/css.jpg" alt="css" border="0">
+			<img src="https://i.ibb.co/SrjqH6f/Java-Script.jpg" alt="Java-Script" border="0">
+			<img src="https://i.ibb.co/d2pfDmh/jQuery.jpg" alt="jQuery" border="0">
+		</div>
+		<div class="SkillImg">
+			<img src="https://i.ibb.co/v3RhWsh/eclipse.jpg" alt="eclipse" border="0">
+			<img src="https://i.ibb.co/TTWrGWR/spring.jpg" alt="spring" border="0">
+		</div>
+		<div class="SkillImg">
+			<img src="https://i.ibb.co/ZfmFCmc/oracle.jpg" alt="oracle" border="0">
+			<img src="https://i.ibb.co/fFh2Dhf/mysql.jpg" alt="mysql" border="0">
+		</div>
+		<div class="SkillImg">
+			<img src="https://i.ibb.co/YfdPwWh/GitHub.jpg" alt="GitHub" border="0">
+		</div>
+	</div>
+	<div id="Project">
+		<h1>Project</h1>
+		<div class="ProjectBox">
+			<div class="ProjectImg">
+				<a href="" target="_blank">
+					<img src="https://i.ibb.co/qmh1ZZY/Java-Burger-Main.png" alt="Java-Burger-Main" border="0">
+				</a>
+			</div>
+			<div class="ProjectTitle">
+				<h2>Java Burger</h2>
+				<h2>2020.02.12~2020.02.25</h2>
+				<h3>Java GUI, MySql</h3>
+				<h3>
+				햄버거를 시키게 되면 먹기 싫은 쟤료 또는 알레르기로 인해 먹지 못하는 쟤료가 있을 것 입니다.<br/>
+				그 점을 개선 하고자 본인이 원하는 쟤료만 넣어 만들수 있는 마이버거와 일반적인 햄버거 무인포스기
+				</h3>
+			</div>
+		</div>
+		<div class="ProjectBox">
+			<div class="ProjectImg">
+				<a href="https://github.com/LeeHwaYoung4017/SpringProjectHomeShop.git" target="_blank">
+					<img src="https://i.ibb.co/tL7czMW/dayeMall.png" alt="dayeMall" border="0">
+				</a>
+			</div>
+			<div class="ProjectTitle">
+				<h2>Men's Shopping Mall DayeMall</h2>
+				<h2>2020.04.31~2020.05.29</h2>
+				<h3>Spring Framework, Java, Oracle, CSS, JavaScript, jQuery, Ajax, GitHub</h3>
+				<h3>
+				4명에서 진행한 프로젝트이며, 남성의류쇼핑몰을 제작했습니다.<br/>
+				맡은파트 : 회원가입 주소API, 메인화면 제작, 베스트아이템리스트 추출, 새로운아이템리스트 추출, <br/>
+				각종 카테고리 리스트, 공지게시판, QA게시판,각종 프론트 작업<br/>
+				</h3>
+			</div>
+		</div>
+		<div class="ProjectBox">
+			<div class="ProjectImg">
+				<a href="https://github.com/LeeHwaYoung4017/20_05_31_WebProject.git" target="_blank">
+					<img src="https://i.ibb.co/4dXTH8M/Community.png" alt="Community" border="0">
+				</a>
+			</div>
+			<div class="ProjectTitle">
+				<h2>Community and Exhibition HomePage</h2>
+				<h2>2020.05.31~2020.06.21</h2>
+				<h3>Spring Framework, Java, Oracle, CSS, JavaScript, jQuery, Ajax, GitHub</h3>
+				<h3>
+				개인 프로젝트이며, 각종커뮤니티와 개발자들의 잡담게시판 또는 IT박람회를 홍보할 수 있는 홈페이지를 제작하였습니다.<br/>
+				</h3>
+			</div>
+		</div>
+	</div>
+	<div id="Contact">
+		<h1>Contact</h1>
+		<h2>Phone : 010-4432-4017</h2>
+		<h2>Email : ghkdud7913@naver.com</h2>
+	</div>
+</body>
+</html>
