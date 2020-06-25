@@ -5,8 +5,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet"> <!-- 한글폰트 NotoSans -->
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 	<script type="text/javascript">
-		function move(idx) {
-			var offset = $("#"+idx).offset();
+		function Name() {
+			var offset = $("#Name").offset();
+			$('html, body').animate({scrollTop : offset.top}, 400);
+		}
+		function Skill() {
+			var offset = $("#Skill").offset();
+			$('html, body').animate({scrollTop : offset.top}, 400);
+		}
+		function Project() {
+			var offset = $("#Project").offset();
+			$('html, body').animate({scrollTop : offset.top}, 400);
+		}
+		function Contact() {
+			var offset = $("#Contact").offset();
 			$('html, body').animate({scrollTop : offset.top}, 400);
 		}
 	</script>
@@ -245,10 +257,10 @@
 <body>
 	<div id="menu">
 		<ul id="menuBar">
-			<li onclick="move('Name')">Name</li>
-			<li onclick="move('Skill')">Skill</li>
-			<li onclick="move('Project')">Project</li>
-			<li onclick="move('Contact')">Contact</li>
+			<li onclick="Name()">Name</li>
+			<li onclick="Skill()">Skill</li>
+			<li onclick="Project()">Project</li>
+			<li onclick="Contact()">Contact</li>
 		</ul>
 	</div>
 	<div id="Name">
@@ -315,7 +327,6 @@
 				4명에서 진행한 프로젝트이며, 남성의류쇼핑몰을 제작했습니다.<br/>
 				맡은파트 : 회원가입 주소API, 메인화면 제작, 베스트아이템리스트 추출, 새로운아이템리스트 추출, <br/>
 				각종 카테고리 리스트, 공지게시판, QA게시판,각종 프론트 작업<br/>
-				<--이미지 클릭
 				</h3>
 			</div>
 		</div>
@@ -331,7 +342,6 @@
 				<h3>Spring Framework, Java, Oracle, CSS, JavaScript, jQuery, Ajax, GitHub</h3>
 				<h3>
 				개인 프로젝트이며, 각종커뮤니티와 개발자들의 잡담게시판 또는 IT박람회를 홍보할 수 있는 홈페이지를 제작하였습니다.<br/>
-				<--이미지 클릭
 				</h3>
 			</div>
 		</div>
